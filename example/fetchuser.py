@@ -7,7 +7,7 @@ client = Enka()
 
 async def main():
     await client.load_lang()
-    user = await client.fetch_user(104267816)
+    user = await client.fetch_user(800857830)
     print(f"Nickname: {user.player.nickname}")
     print(f"Level: {user.player.level}")
     print(f'Signature: {user.player.signature}')
@@ -19,12 +19,16 @@ async def main():
     print(f'Ascension: {character.ascension}')
     print(f'Level: {character.level}')
     print(f'Exp: {character.experience}')
+    print(f"HP: {character.combat.FIGHT_PROP_MAX_HP}")
+    print(f"ATTACK: {character.combat.FIGHT_PROP_CUR_ATTACK}")
+    print(f"DEFFENSE: {character.combat.FIGHT_PROP_CUR_DEFENSE}")
     print('Weapon:')
     weapon = character.weapon
     print(f'\tName: {weapon.name}')
     print(f'\tLevel: {weapon.level}')
     print(f'\tRefine: {weapon.refine}')
     print(f'\tStar level: {weapon.rank}')
+    print(f"\tSub Stat: {weapon.weaponStats[1].statValue}")
 
     print('Constellations:')
     for constellation in character.constellations:

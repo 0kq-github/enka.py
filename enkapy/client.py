@@ -20,7 +20,7 @@ class Enka:
         print(f"Nickname: {user.player.nickname}")
 
     """
-    _URL = "https://enka.network/u/{uid}/__data.json"
+    _URL = "https://enka.network/api/uid/{uid}"
     _REPO_BASE = 'https://raw.githubusercontent.com/Sycamore0/GenshinData/main'
     _LANG_URL = _REPO_BASE + '/TextMap/TextMap{lang}.json'
     _AVATAR_URL = _REPO_BASE + '/ExcelBinOutput/AvatarExcelConfigData.json'
