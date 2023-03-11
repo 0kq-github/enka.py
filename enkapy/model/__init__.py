@@ -13,3 +13,5 @@ class EnkaData(BaseModel):
     characters: List[CharacterInfo] = Field([], alias="avatarInfoList")
     """Player characters shown in game"""
     ttl: int = 0
+
+    raw: dict = {}

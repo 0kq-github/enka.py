@@ -206,8 +206,9 @@ class Enka:
 
             if not data:
                 raise UIDNotFounded(f"UID {uid} not found.")
-
+        
         obj: EnkaData = EnkaData.parse_obj(data)
+        obj.raw = data
 
         for character in obj.characters:
             if character.skill_depot_id in self._skill_depot_data:
