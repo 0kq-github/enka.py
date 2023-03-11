@@ -1,5 +1,5 @@
 import json
-import os.path
+import os
 
 import aiohttp
 from aiocache import cached
@@ -21,14 +21,12 @@ class Enka:
 
     """
     _URL = "https://enka.network/u/{uid}/__data.json"
-    # https://github.com/theBowja/GenshinData-1
-    # https://raw.githubusercontent.com/GrownNed/Homework/master
-    _REPO_BASE = 'https://gitlab.com/Dimbreath/gamedata/-/raw/master'
-    _LANG_URL = _REPO_BASE + '/TextMap/TextMap{lang}.json?inline=false'
-    _AVATAR_URL = _REPO_BASE + '/ExcelBinOutput/AvatarExcelConfigData.json?inline=false'
-    _TALENT_URL = _REPO_BASE + '/ExcelBinOutput/AvatarTalentExcelConfigData.json?inline=false'
-    _SKILL_DEPOT_URL = _REPO_BASE + '/ExcelBinOutput/AvatarSkillDepotExcelConfigData.json?inline=false'
-    _SKILL_URL = _REPO_BASE + '/ExcelBinOutput/AvatarSkillExcelConfigData.json?inline=false'
+    _REPO_BASE = 'https://raw.githubusercontent.com/Sycamore0/GenshinData/main'
+    _LANG_URL = _REPO_BASE + '/TextMap/TextMap{lang}.json'
+    _AVATAR_URL = _REPO_BASE + '/ExcelBinOutput/AvatarExcelConfigData.json'
+    _TALENT_URL = _REPO_BASE + '/ExcelBinOutput/AvatarTalentExcelConfigData.json'
+    _SKILL_DEPOT_URL = _REPO_BASE + '/ExcelBinOutput/AvatarSkillDepotExcelConfigData.json'
+    _SKILL_URL = _REPO_BASE + '/ExcelBinOutput/AvatarSkillExcelConfigData.json'
     USER_AGENT = "Mozilla/5.0"
     timeout = 30
     """Http connection timeout"""

@@ -2,12 +2,12 @@ import setuptools
 
 setuptools.setup(
     name="enka.py",
-    version="1.1.1",
-    author="pwnblog",
+    version="1.1.2",
+    author="0kq (original: pwnblog)",
     description="Library for fetching JSON data from site https://enka.network/",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/pwnblog/enka.py",
+    url="https://github.com/0kq-github/enka.py",
     keywords=['enkapy.py', 'enkapy', 'enka.network', 'genshinapi'],
     packages=setuptools.find_packages(),
     classifiers=[
@@ -21,6 +21,6 @@ setuptools.setup(
         "aiohttp",
         "aiocache"
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.10",
     include_package_data=True
 )
